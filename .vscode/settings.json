@@ -1,0 +1,8 @@
+{
+  "ruby.format": "standard",
+  "ruby.lint": {
+    "standard": {
+      "useBundler": true,
+    }
+  }
+}
