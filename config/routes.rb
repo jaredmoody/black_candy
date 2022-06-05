@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount Sidekiq::Web => '/jobs'
+
   concern :playable do
     member do
       post "play"
