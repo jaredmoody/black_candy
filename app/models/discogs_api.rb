@@ -32,8 +32,11 @@ class DiscogsApi
     end
 
     def get_image(response)
-      return if response.blank? || response[:results].blank?
+      if response.blank? || response[:results].blank?
+        Rails.logger.info "[Discogs] Response: #{response}"
 
+        return
+      end
       response[:results].first[:cover_image]
     end
   end
